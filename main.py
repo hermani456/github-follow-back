@@ -4,9 +4,6 @@ import requests
 GITHUB_USERNAME = os.environ["USERNAME"]
 GITHUB_TOKEN = os.environ["TOKEN"]
 
-print(f"Username: {GITHUB_USERNAME}")
-print(f"Token: { GITHUB_TOKEN }")
-
 def get_all_items(url):
     items = []
     page = 1
@@ -48,16 +45,22 @@ def unfollow_user(username):
         print(f"Unfollowed {username}")
     else:
         print(f"Failed to unfollow {username}: {response.status_code} {response.json()}")
+        
+def get_exeptions_list(filename):
+    with open(filename, 'r') as f:
+        exceptions = set(line.strip() for line in f)
+    return exceptions
 
 def main():
     followers = get_followers(GITHUB_USERNAME)
     following = get_following(GITHUB_USERNAME)
+    exceptions = get_exeptions_list('whitelist.txt')
 
     to_follow = followers - following
     for user in to_follow:
         follow_user(user)
 
-    to_unfollow = following - followers
+    to_unfollow = (following - followers) - exceptions
     for user in to_unfollow:
         unfollow_user(user)
 
