@@ -1,10 +1,8 @@
 name: GitHub Follow Back
 
 on:
-  schedule: "*/1 * * * *" # Runs every minute
-  # schedule: # Runs at midnight and noon every day
-  #   - cron: "0 0 * * *"
-  #   - cron: "0 12 * * *"
+  schedule:
+    - cron: "*/5 * * * *" # Runs every 5 minutes
 
 env:
   USERNAME: ${{ secrets.USERNAME }}
