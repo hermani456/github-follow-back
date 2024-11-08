@@ -55,11 +55,11 @@ def main():
 
     to_follow = followers - following
     for user in to_follow:
-        print(user)
+        follow_user(user)
 
     to_unfollow = following - followers
     for user in to_unfollow:
-        print(user)
+        unfollow_user(user)
 
 if __name__ == '__main__':
     main()
