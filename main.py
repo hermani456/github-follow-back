@@ -1,8 +1,11 @@
 import os
 import requests
 
-GITHUB_USERNAME = os.getenv("GH_USERNAME")
-GITHUB_TOKEN = os.getenv("GH_TOKEN")
+GITHUB_USERNAME = os.environ["USERNAME"]
+GITHUB_TOKEN = os.environ["TOKEN"]
+
+print(f"Username: {GITHUB_USERNAME}")
+print(f"Token: { GITHUB_TOKEN }")
 
 def get_all_items(url):
     items = []
@@ -52,11 +55,11 @@ def main():
 
     to_follow = followers - following
     for user in to_follow:
-        follow_user(user)
+        print(user)
 
     to_unfollow = following - followers
     for user in to_unfollow:
-        unfollow_user(user)
+        print(user)
 
 if __name__ == '__main__':
     main()
