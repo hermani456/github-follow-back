@@ -1,9 +1,8 @@
-
+import os
 import requests
 
-# Replace these variables with your GitHub username and personal access token
-GITHUB_USERNAME = ''
-GITHUB_TOKEN = ''
+GITHUB_USERNAME = os.getenv("GH_USERNAME")
+GITHUB_TOKEN = os.getenv("GH_TOKEN")
 
 def get_all_items(url):
     items = []
