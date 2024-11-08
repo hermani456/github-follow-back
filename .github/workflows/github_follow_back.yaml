@@ -1,0 +1,27 @@
+name: GitHub Follow Back
+
+on:
+  schedule: # Runs at midnight and noon every day
+    - cron: "0 0 * * *"
+    - cron: "0 12 * * *"
+
+jobs:
+  manage-followers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+
+      - name: set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: install dependencies
+        run: pip install requests
+
+      - name: run script
+        env:
+          GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python main.py
