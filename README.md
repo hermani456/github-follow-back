@@ -1,4 +1,4 @@
-# GitHub Auto Follow Back
+# GitHub Auto Follow Back Script
 
 Automatically follow back users who follow you on GitHub. This action also unfollows ~~assholes~~ users who don't follow you back (with exceptions).
 
@@ -26,14 +26,13 @@ Automatically follow back users who follow you on GitHub. This action also unfol
        - Click "Generate token"
        - Copy the generated token (you will need it in the next step)
 3. Add your GitHub secrets:
-   - Go to your repository `Settings` > `Secrets and variables` > `Actions`
+   - Go to your repository `Settings` > `Secrets and variables` > `Actions` > `New repository secret`
    - Add two new secrets:
      - `USERNAME`: Your GitHub username
      - `TOKEN`: The GitHub Personal Access Token you generated in the previous step
 
-## ⚙️ Configuration
 
-### Whitelist Users
+## Whitelist Users
 Edit `whitelist.txt` file in the root directory with usernames you never want to unfollow:
 ```txt
 username1
