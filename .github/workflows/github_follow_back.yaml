@@ -1,8 +1,7 @@
 name: GitHub Follow Back
 
 on:
-  schedule:
-    - cron: "*/5 * * * *" # Runs every 5 minutes
+  workflow_dispatch:
 
 env:
   USERNAME: ${{ secrets.USERNAME }}
