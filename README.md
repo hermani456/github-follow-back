@@ -1,6 +1,6 @@
-# GitHub Auto Follow Back Script
+# GitHub Auto Follow Back
 
-Automatically follow back users who follow you on GitHub. This action also unfollows ~~assholes~~ users who don't follow you back (with exceptions).
+This Github Action Automatically follow back users who follow you on GitHub. This action also unfollows ~~assholes~~ users who don't follow you back (with exceptions).
 
 
 
@@ -30,6 +30,7 @@ Automatically follow back users who follow you on GitHub. This action also unfol
    - Add two new secrets:
      - `USERNAME`: Your GitHub username
      - `TOKEN`: The GitHub Personal Access Token you generated in the previous step
+4. The action will run every 5 hours, you can change this in the github_follow_back.yaml file.
 
 
 ## Whitelist Users
