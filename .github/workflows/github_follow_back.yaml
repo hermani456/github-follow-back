@@ -6,6 +6,7 @@ on:
     - cron: "0 0 * * *" # every day at midnight (UTC)
     # - cron: "0 0 * * 1,4" # every Monday and Thursday at midnight (UTC)
     # - cron: "0 0 * * 1" # every Monday at midnight (UTC)
+  workflow_dispatch:
 env:
   USERNAME: ${{ secrets.USERNAME }}
   TOKEN: ${{ secrets.TOKEN }}
