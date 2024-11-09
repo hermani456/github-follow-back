@@ -13,7 +13,6 @@ This Github Action Automatically follow back users who follow you on GitHub. Thi
        - Click on "Generate new token (classic)"
        - Set a note for the token (e.g., "GitHub Follow Back Token")
        - Select the following scopes:
-         - `read:user`
          - `user:follow`
        - Click "Generate token"
        - Copy the generated token (you will need it in the next step)
