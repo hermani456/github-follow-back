@@ -2,8 +2,10 @@ name: GitHub Follow Back
 
 on:
   schedule:
-    - cron: "0 */5 * * *" # every 5 hours
-
+    # - cron: "0 */5 * * *" # every 5 hours
+    - cron: "0 0 * * *" # every day at midnight (UTC)
+    # - cron: "0 0 * * 1,4" # every Monday and Thursday at midnight (UTC)
+    # - cron: "0 0 * * 1" # every Monday at midnight (UTC)
 env:
   USERNAME: ${{ secrets.USERNAME }}
   TOKEN: ${{ secrets.TOKEN }}

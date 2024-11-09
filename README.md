@@ -30,7 +30,7 @@ This Github Action Automatically follow back users who follow you on GitHub. Thi
    - Add two new secrets:
      - `USERNAME`: Your GitHub username
      - `TOKEN`: The GitHub Personal Access Token you generated in the previous step
-4. The action will run every 5 hours, you can change this in the github_follow_back.yaml file.
+4. The action will run everyday at midnight, you can change this in the github_follow_back.yaml file.
 
 ## ⚠️ Enable GitHub Actions on Your Fork
 
@@ -40,9 +40,13 @@ After forking this repository, GitHub Actions are disabled by default on your fo
 2. Click on the **Actions** tab.
 3. You will see a message stating **"Workflows aren’t being run on this forked repository."**
 4. Click the **"I understand my workflows, go ahead and enable them"** button.
-5. Go to **Github Follow Back and enable workflow**
-
-Once enabled, the GitHub Action will start running according to the scheduled intervals.
+5. Go to **GitHub Follow Back** and enable the workflow.
+6. Manually trigger the workflow to ensure it runs:
+   - Click on the **"GitHub Follow Back"** workflow.
+   - Click the **"Run workflow"** button on the right side.
+   - In the modal that appears, click **"Run workflow"**.
+   
+Once you have manually triggered the workflow, it will automatically run according to the specified schedule (everyday at midnight).
 
 
 ## Whitelist Users
