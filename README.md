@@ -1,4 +1,4 @@
-# GitHub Auto Follow Back
+# GitHub Auto Follow Back Action
 
 This Github Action Automatically follow back users who follow you on GitHub. This action also unfollows ~~assholes~~ users who don't follow you back (with exceptions).
 
