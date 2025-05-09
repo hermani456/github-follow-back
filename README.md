@@ -53,3 +53,4 @@ Edit `whitelist.txt` file in the root directory with usernames you never want to
 ```txt
 username1
 username2
+username3
